@@ -1,3 +1,10 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+:root {
+    --primary-color: #7159c1;
+    --secondary-color: #50fa7b;
+}
+
 * {
     padding: 0;
     border: 0;
@@ -5,20 +12,21 @@
 }
 
 body {
-    background-color: #7159c1;
+    background-color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 header {
-    font-family: 'Roboto', sans-serif;
     background-color:rgba(0, 0, 0, 0.1);
     padding: 30px;
 }
 
-header div {
+.links {
     text-align: center;
 }
 
-header .links a{
+.links a{
     color: white;
     margin: 0 30px;
     font-size: 24px;
@@ -26,7 +34,51 @@ header .links a{
     text-decoration: none;
 }
 
-header .links a:hover {
-    color: #50fa7b;
+.links a:hover {
+    color: var(--secondary-color);
     transition: 700ms;
+}
+
+.page-info {
+    text-align: center;
+    padding-top: 32px;
+    line-height: 42px;
+}
+
+.page-info img {
+    margin-top: 16px;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid var(--secondary-color);
+}
+
+.page-info h1 {
+    font-weight: lighter;
+    margin: 16px;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--secondary-color);
+}
+
+.page-info p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.page-info ul {
+    margin-top: 8px;    
+    text-decoration: underline 2px;
+}
+
+#links-footer {
+    margin-top: 80px;
+}
+
+#links-footer a {
+    margin: 0;
+}
+
+#links-footer a + a, a + a + a{
+    margin: 0 0 0 40px;
 }
