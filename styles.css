@@ -1,8 +1,11 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
 
 :root {
-    --primary-color: #7159c1;
-    --secondary-color: #50fa7b;
+    --rocket-color: #7159c1;
+    --gostack-color: #50fa7b;
+    --launchbase-color: #FD951F;
+    --body-color: rgba(11, 10, 13, 0.9);
+    --header-color: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -12,13 +15,13 @@
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--body-color);
     font-family: 'Roboto', sans-serif;
     color: white;
 }
 
 header {
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color: var(--header-color);
     padding: 30px;
 }
 
@@ -35,7 +38,7 @@ header {
 }
 
 .links a:hover {
-    color: var(--secondary-color);
+    color: var(--gostack-color);
     transition: 700ms;
 }
 
@@ -49,7 +52,7 @@ header {
     margin-top: 16px;
     height: 250px;
     border-radius: 50%;
-    border: 10px solid var(--secondary-color);
+    border: 10px solid var(--gostack-color);
 }
 
 .page-info h1 {
@@ -57,7 +60,7 @@ header {
     margin: 16px;
     font-size: 40px;
     line-height: 50px;
-    color: var(--secondary-color);
+    color: var(--gostack-color);
 }
 
 .page-info p {
@@ -77,8 +80,89 @@ header {
 
 #links-footer a {
     margin: 0;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 #links-footer a + a, a + a + a{
     margin: 0 0 0 40px;
+}
+
+/* === CARDS === */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 30px auto;
+    height: 600px;
+}
+
+.card {
+    background-color: var(--header-color);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-number {
+    margin: 50px;
+}
+
+.card-number[id="1"] h1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bold;
+    max-width: 50px;
+    max-height: 40px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    border: 2px solid var(--rocket-color);
+    border-radius: 50%;
+}
+
+.card-number[id="2"] h1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bold;
+    max-width: 50px;
+    max-height: 40px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    border: 2px solid var(--launchbase-color);
+    border-radius: 50%;
+}
+
+.card-number[id="3"] h1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bolder;
+    max-width: 50px;
+    max-height: 40px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    border: 2px solid var(--gostack-color);
+    border-radius: 50%;
+}
+
+.card-logo {
+    max-width: 330px;
+    margin: 120px auto 60px;
+}
+
+.card-description p scan[id="1"] {
+    color: var(--rocket-color);
+}
+
+
+.card-description p scan[id="2"] {
+    color: var(--launchbase-color);
+}
+
+
+.card-description p scan[id="3"] {
+    color: var(--gostack-color);
 }
