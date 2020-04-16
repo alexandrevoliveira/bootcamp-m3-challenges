@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 :root {
     --rocket-color: #7159c1;
@@ -94,8 +95,8 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
-    max-width: 1100px;
-    margin: 30px auto;
+    max-width: 1150px;
+    margin: 76px auto;
     height: 600px;
 }
 
@@ -105,43 +106,54 @@ header {
     border-radius: 10px;
 }
 
+.card[id="starter"]:hover {
+    border: 3px solid var(--rocket-color)
+}
+
+.card[id="launchbase"]:hover {
+    border: 3px solid var(--launchbase-color)
+}
+
+.card[id="gostack"]:hover {
+    border: 3px solid var(--gostack-color)
+}
+
 .card-number {
     margin: 50px;
 }
 
-.card-number[id="1"] h1{
+.card-number[id="starter"] h1{
     text-align: center;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     font-weight: bold;
-    max-width: 50px;
-    max-height: 40px;
+    max-width: 44px;
+    max-height: 44px;
     margin: 0 auto;
     padding: 10px 0px;
     border: 2px solid var(--rocket-color);
     border-radius: 50%;
 }
 
-.card-number[id="2"] h1{
+.card-number[id="launchbase"] h1{
     text-align: center;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     font-weight: bold;
-    max-width: 50px;
-    max-height: 40px;
+    max-width: 44px;
+    max-height: 44px;
     margin: 0 auto;
-    padding: 10px 0px;
-    border: 2px solid var(--launchbase-color);
+    padding: 10px 0px;    border: 2px solid var(--launchbase-color);
     border-radius: 50%;
 }
 
-.card-number[id="3"] h1{
+.card-number[id="gostack"] h1{
     text-align: center;
     font-size: 16px;
-    line-height: 26px;
-    font-weight: bolder;
-    max-width: 50px;
-    max-height: 40px;
+    line-height: 24px;
+    font-weight: bold;
+    max-width: 44px;
+    max-height: 44px;
     margin: 0 auto;
     padding: 10px 0px;
     border: 2px solid var(--gostack-color);
@@ -149,8 +161,13 @@ header {
 }
 
 .card-logo {
-    max-width: 330px;
-    margin: 120px auto 60px;
+    max-width: 280px;
+    margin: 100px auto 70px;
+}
+
+.card-description p {
+    max-width: 280px;
+    margin: 0px auto 0;
 }
 
 .card-description p scan[id="1"] {
@@ -166,3 +183,84 @@ header {
 .card-description p scan[id="3"] {
     color: var(--gostack-color);
 }
+
+.card-price {
+    font-size: 12px;
+    max-width: 300px;
+    margin: 60px auto 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-price h1 {
+    text-align: left;
+}
+
+.card-price[id="starter"] h2 {
+    background-color: var(--rocket-color);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 4px 16px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.card-price[id="launchbase"] h2 {
+    background-color: var(--launchbase-color);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 4px 16px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.card-price[id="gostack"] h2 {
+    background-color: var(--gostack-color);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 4px 16px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content iframe{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 5%;
+}
+
