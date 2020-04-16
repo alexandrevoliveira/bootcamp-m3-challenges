@@ -107,15 +107,18 @@ header {
 }
 
 .card[id="starter"]:hover {
-    border: 3px solid var(--rocket-color)
+    border: 3px solid var(--rocket-color);
+    transition: color 500ms;
 }
 
 .card[id="launchbase"]:hover {
-    border: 3px solid var(--launchbase-color)
+    border: 3px solid var(--launchbase-color);
+    transition: color 500ms;
 }
 
 .card[id="gostack"]:hover {
-    border: 3px solid var(--gostack-color)
+    border: 3px solid var(--gostack-color);
+    transition: color 500ms;
 }
 
 .card-number {
@@ -196,34 +199,25 @@ header {
     text-align: left;
 }
 
-.card-price[id="starter"] h2 {
-    background-color: var(--rocket-color);
+.card-price h2 {
     color: white;
     text-align: center;
     border-radius: 20px;
     padding: 4px 16px;
     max-width: 300px;
     margin: 0 auto;
+}
+
+.card-price[id="starter"] h2 {
+    background-color: var(--rocket-color);
 }
 
 .card-price[id="launchbase"] h2 {
     background-color: var(--launchbase-color);
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding: 4px 16px;
-    max-width: 300px;
-    margin: 0 auto;
 }
 
 .card-price[id="gostack"] h2 {
     background-color: var(--gostack-color);
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding: 4px 16px;
-    max-width: 300px;
-    margin: 0 auto;
 }
 
 .modal-overlay {
