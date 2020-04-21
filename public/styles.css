@@ -1,0 +1,260 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+:root {
+    --rocket-color: #7159c1;
+    --gostack-color: #50fa7b;
+    --launchbase-color: #FD951F;
+    --body-color: rgba(11, 10, 13, 0.9);
+    --header-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 30px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a{
+    color: white;
+    margin: 0 30px;
+    font-size: 24px;
+    line-height: 34px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--gostack-color);
+    transition: 700ms;
+}
+
+.page-info {
+    text-align: center;
+    padding-top: 32px;
+    line-height: 42px;
+}
+
+.page-info img {
+    margin: 16px 0;
+    height: 250px;
+    border-radius: 50%;
+    border: 6px solid var(--gostack-color);
+}
+
+.page-info h1 {
+    font-weight: lighter;
+    margin: 16px;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--rocket-color);
+}
+
+.page-info p {
+    max-width: 600px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+.page-info ul {
+    margin-top: 8px;    
+    text-decoration: underline 2px;
+}
+
+#links-footer {
+    margin-top: 40px;
+}
+
+#links-footer a {
+    margin: 0;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#links-footer a + a, a + a + a{
+    margin: 0 0 0 40px;
+}
+
+/* === CARDS === */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1150px;
+    margin: 80px auto;
+    height: 600px;
+}
+
+.card {
+    background-color: var(--header-color);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card[id="starter"]:hover {
+    border: 3px solid var(--rocket-color);
+    transition: color 500ms;
+}
+
+.card[id="launchbase"]:hover {
+    border: 3px solid var(--launchbase-color);
+    transition: color 500ms;
+}
+
+.card[id="gostack"]:hover {
+    border: 3px solid var(--gostack-color);
+    transition: color 500ms;
+}
+
+.card-number {
+    margin: 50px;
+}
+
+.card-number[id="starter"] h1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    max-width: 44px;
+    max-height: 44px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    border: 2px solid var(--rocket-color);
+    border-radius: 50%;
+}
+
+.card-number[id="launchbase"] h1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    max-width: 44px;
+    max-height: 44px;
+    margin: 0 auto;
+    padding: 10px 0px;    border: 2px solid var(--launchbase-color);
+    border-radius: 50%;
+}
+
+.card-number[id="gostack"] h1{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    max-width: 44px;
+    max-height: 44px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    border: 2px solid var(--gostack-color);
+    border-radius: 50%;
+}
+
+.card-logo {
+    max-width: 280px;
+    margin: 100px auto 70px;
+}
+
+.card-description p {
+    max-width: 280px;
+    margin: 0px auto 0;
+}
+
+.card-description p scan[id="1"] {
+    color: var(--rocket-color);
+}
+
+
+.card-description p scan[id="2"] {
+    color: var(--launchbase-color);
+}
+
+
+.card-description p scan[id="3"] {
+    color: var(--gostack-color);
+}
+
+.card-price {
+    font-size: 12px;
+    max-width: 300px;
+    margin: 60px auto 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-price h1 {
+    text-align: left;
+}
+
+.card-price h2 {
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 4px 16px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.card-price[id="starter"] h2 {
+    background-color: var(--rocket-color);
+}
+
+.card-price[id="launchbase"] h2 {
+    background-color: var(--launchbase-color);
+}
+
+.card-price[id="gostack"] h2 {
+    background-color: var(--gostack-color);
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content iframe{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 5%;
+}
+
