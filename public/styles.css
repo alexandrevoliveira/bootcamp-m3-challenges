@@ -146,7 +146,8 @@ header {
     max-width: 44px;
     max-height: 44px;
     margin: 0 auto;
-    padding: 10px 0px;    border: 2px solid var(--launchbase-color);
+    padding: 10px 0px;    
+    border: 2px solid var(--launchbase-color);
     border-radius: 50%;
 }
 
@@ -173,17 +174,17 @@ header {
     margin: 0px auto 0;
 }
 
-.card-description p scan[id="1"] {
+.card-description p span[id="1"] {
     color: var(--rocket-color);
 }
 
 
-.card-description p scan[id="2"] {
+.card-description p span[id="2"] {
     color: var(--launchbase-color);
 }
 
 
-.card-description p scan[id="3"] {
+.card-description p span[id="3"] {
     color: var(--gostack-color);
 }
 
@@ -258,3 +259,22 @@ header {
     top: 5%;
 }
 
+/* not-found.njk */
+
+.not-found {
+    text-align: center;
+}
+
+.not-found h1 {
+    font-size: 32px;
+    line-height: 42px;
+    margin: 100px auto;
+    color: var(--launchbase-color);
+}
+
+.not-found p {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0 auto 484px;
+    color: white;
+}
