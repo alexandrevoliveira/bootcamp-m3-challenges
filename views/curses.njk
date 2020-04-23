@@ -8,62 +8,26 @@
 {% block content %}
 
     <section class="cards">
-        <div class="card" id="starter">
-            <div class="card-number" id="starter">
-                <h1>01</h1>
+        {% for item in items %}
+        <div class="card" id={{item.id}}>
+            <div class="card-number" id={{item.id}}>
+                <h1>{{ item.number }}</h1>
             </div>
 
             <div class="card-logo">
-                <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="starter">
+                <img src={{item.logo}} alt={{item.id}}>
             </div>
 
             <div class="card-description">
-                <p><span id="1">Torne-se um programador desejado</span> no mercado com esses cursos gratuitos</p>
+                <p>{{ item.description }}</p>
             </div>
 
-            <div class="card-price" id="starter">
+            <div class="card-price" id={{item.id}}>
                 <h1>Preço</h1>
-                <h2>Gratuito</h2>
+                <h2>{{ item.price }}</h2>
             </div>
         </div>
-
-        <div class="card" id="launchbase">
-            <div class="card-number" id="launchbase">
-                <h1>02</h1>
-            </div>
-
-            <div class="card-logo">
-                <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="launchbase">
-            </div>
-            
-            <div class="card-description">
-                <p><span id="2">Domine programacao do zero</span> e tenha acesso às melhores oportunidades do mercado</p>
-            </div>
-
-            <div class="card-price" id="launchbase">
-                <h1>Preço</h1>
-                <h2>R$ 860,00</h2>
-            </div>
-        </div>
-
-        <div class="card" id="gostack">
-            <div class="card-number" id="gostack">
-                <h1>03</h1>
-            </div>
-
-            <div class="card-logo">
-                <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="gostack">
-            </div>
-
-            <div class="card-description">
-                <p><span id="3">Treinamento imersivo</span> nas tecnologias mais modernas de desenvolvimento web e mobile</p>
-            </div>
-
-            <div class="card-price" id="gostack">
-                <h1>Preço</h1>
-                <h2>R$ 1.600,00</h2>
-            </div>
-        </div>
+        {% endfor %}
 
     </section>
 
