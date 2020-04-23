@@ -10,20 +10,20 @@
     <section class="cards">
 
         {% for item in items %}
-        <div class="card" id={{item.id}}>
-            <div class="card-number" id={{item.id}}>
+        <div class="card" id="{{ item.id }}">
+            <div class="card-number" id="{{ item.id }}">
                 <h1>0{{ item.number }}</h1>
             </div>
 
             <div class="card-logo">
-                <img src={{item.logo}} alt={{item.id}}>
+                <img src="{{ item.logo }}" alt="Curso {{ item.id }}">
             </div>
 
             <div class="card-description">
                 <p>{{ item.description }}</p>
             </div>
 
-            <div class="card-price" id={{item.id}}>
+            <div class="card-price" id="{{ item.id }}">
                 <h1>Preço</h1>
                 <h2>{{ item.price }}</h2>
             </div>
