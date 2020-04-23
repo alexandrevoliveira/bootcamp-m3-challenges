@@ -19,10 +19,10 @@ server.get("/", function(req, res){
         title: "Rocketseat",
         description: "Somos líder no mercado de formacão para área de desenvolvimento web com a utilizacão das seguintes tecnologias:",
         technologies: [
-            {technology: "HTML"},
-            {technology: "CSS"},
-            {technology: "JavaScript"},
-            {technology: "NodeJS"}
+            {name: "HTML"},
+            {name: "CSS"},
+            {name: "JavaScript"},
+            {name: "NodeJS"}
         ]
     }
 
