@@ -8,14 +8,13 @@
 {% block content %}
 
     <div class="page-info">
-        <img src="https://pbs.twimg.com/profile_images/953595371875422210/0pWsfSSp_400x400.jpg" alt="Rocketseat Image">
-        <h1>Rocketseat</h1>
-        <p>Somos líder no mercado de formacão para área de desenvolvimento web com a utilizacão das seguintes tecnologias:</p>
+        <img src="{{ about.image_url }}" alt="Rocketseat Image">
+        <h1>{{ about.title }}</h1>
+        <p>{{ about.description }}</p>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>NodeJS</li>
+            {% for technology in about.technologies %}
+                <li> {{ technology.technology }}</li>
+            {% endfor %}            
         </ul>
     </div>
 
