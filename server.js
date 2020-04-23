@@ -14,7 +14,19 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res){
-    return res.render("about")
+    const about = {
+        image_url: "https://pbs.twimg.com/profile_images/953595371875422210/0pWsfSSp_400x400.jpg",
+        title: "Rocketseat",
+        description: "Somos líder no mercado de formacão para área de desenvolvimento web com a utilizacão das seguintes tecnologias:",
+        technologies: [
+            {technology: "HTML"},
+            {technology: "CSS"},
+            {technology: "JavaScript"},
+            {technology: "NodeJS"}
+        ]
+    }
+
+    return res.render("about", { about })
 })
 
 server.get("/curses", function(req, res){
