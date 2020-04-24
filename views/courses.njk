@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{ item.id }}</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/x-icon" />
+{% endblock %}
+
+{% block content %}
+
+<div class="course-title">
+    <h1>{{item.id}}</h1>
+</div>
+
+<section class="course">
+
+    <div class="card" id="{{ item.id }}">     
+        <div class="card-course">
+            <iframe src="https://rocketseat.com.br/{{item.id}}" frameborder="0"></iframe>
+        </div>
+
+        <div class="card-price" id="{{ item.id }}">
+            <h1>Preço</h1>
+            <h2>{{ item.price }}</h2>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
