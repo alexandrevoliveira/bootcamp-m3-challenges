@@ -29,8 +29,24 @@ server.get("/", function(req, res){
     return res.render("about", { about })
 })
 
-server.get("/curses", function(req, res){
-    return res.render("curses", { items: cursos })
+server.get("/portfolio", function(req, res){
+    return res.render("portfolio", { items: cursos })
+})
+
+server.get("/courses/:id", function(req, res) {
+    const id = req.params.id
+    
+    const curso = cursos.find(function(curso) {
+        if (curso.id == id) {
+            return true
+        }
+    })
+
+    if(!curso) {
+        return res.send(`O id fornecido da roda é ${id}`)
+    }
+
+    return res.render("courses", { item: curso })
 })
 
 server.use(function(req, res){
