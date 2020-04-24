@@ -1,0 +1,37 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Bootcamp - Cursos</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/x-icon" />
+{% endblock %}
+
+{% block content %}
+
+    <section class="cards">
+
+        {% for item in items %}
+        <div class="card" id="{{ item.id }}">
+            <div class="card-number" id="{{ item.id }}">
+                <h1>0{{ item.number }}</h1>
+            </div>
+
+            <div class="card-logo">
+                <img src="{{ item.logo }}" alt="Curso {{ item.id }}">
+            </div>
+
+            <div class="card-description">
+                <p>{{ item.description }}</p>
+            </div>
+
+            <div class="card-price" id="{{ item.id }}">
+                <h1>Preço</h1>
+                <h2>{{ item.price }}</h2>
+            </div>
+        </div>
+        {% endfor %}
+
+    </section>
+
+    <script src="/scripts.js"></script>
+
+{% endblock %}
