@@ -291,6 +291,10 @@ header {
 
 /* === COURSES.NJK === */
 
+head title {
+    text-transform: capitalize;
+}
+
 .course-title {
     text-align: center;
     padding: 48px;
