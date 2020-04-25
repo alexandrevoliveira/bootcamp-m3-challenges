@@ -37,9 +37,7 @@ server.get("/courses/:id", function(req, res) {
     const id = req.params.id
     
     const curso = cursos.find(function(curso) {
-        if (curso.id == id) {
-            return true
-        }
+            return curso.id == id
     })
 
     if(!curso) {
